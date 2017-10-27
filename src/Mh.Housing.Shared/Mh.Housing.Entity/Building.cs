@@ -28,5 +28,6 @@ namespace Mh.Housing.Entity
         /// </summary>
         public int Location { get; set; }
 
+
     }
 }
