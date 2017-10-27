@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mh.Housing.ManageSite", "Mh.Housing.Site\Mh.Housing.ManageSite\Mh.Housing.ManageSite.csproj", "{5CA23162-7921-4AC4-8725-82AC599F9BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mh.Housing.Entity", "Mh.Housing.Shared\Mh.Housing.Entity\Mh.Housing.Entity.csproj", "{759D164F-FFF2-47F2-9801-72E9F19BE761}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CA23162-7921-4AC4-8725-82AC599F9BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA23162-7921-4AC4-8725-82AC599F9BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA23162-7921-4AC4-8725-82AC599F9BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA23162-7921-4AC4-8725-82AC599F9BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759D164F-FFF2-47F2-9801-72E9F19BE761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759D164F-FFF2-47F2-9801-72E9F19BE761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759D164F-FFF2-47F2-9801-72E9F19BE761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759D164F-FFF2-47F2-9801-72E9F19BE761}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
