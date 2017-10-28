@@ -52,12 +52,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -120,6 +132,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\api\apiAreaRegistration.cs" />
+    <Compile Include="Areas\api\Controllers\UserController.cs" />
+    <Compile Include="Areas\b\bAreaRegistration.cs" />
+    <Compile Include="Areas\b\Controllers\BuildingController.cs" />
+    <Compile Include="Areas\b\Controllers\LoginController.cs" />
+    <Compile Include="Areas\c\cAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -127,6 +146,69 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\admin.css" />
+    <Content Include="assets\css\amazeui.css" />
+    <Content Include="assets\css\amazeui.datatables.min.css" />
+    <Content Include="assets\css\amazeui.flat.css" />
+    <Content Include="assets\css\amazeui.flat.min.css" />
+    <Content Include="assets\css\amazeui.min.css" />
+    <Content Include="assets\css\amazeui.mineeeee.css" />
+    <Content Include="assets\css\app.css" />
+    <Content Include="assets\css\echartsHome.css" />
+    <Content Include="assets\css\fullcalendar.min.css" />
+    <Content Include="assets\css\fullcalendar.print.css" />
+    <Content Include="assets\css\shop.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\img\a5.png" />
+    <Content Include="assets\img\k.jpg" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\logoa.png" />
+    <Content Include="assets\img\logob.png" />
+    <Content Include="assets\img\user01.png" />
+    <Content Include="assets\img\user02.png" />
+    <Content Include="assets\img\user03.png" />
+    <Content Include="assets\img\user04.png" />
+    <Content Include="assets\img\user05.png" />
+    <Content Include="assets\img\user06.png" />
+    <Content Include="assets\img\user07.png" />
+    <Content Include="assets\i\app-icon72x72%402x.png" />
+    <Content Include="assets\i\examples\admin-chrome.png" />
+    <Content Include="assets\i\examples\admin-firefox.png" />
+    <Content Include="assets\i\examples\admin-ie.png" />
+    <Content Include="assets\i\examples\admin-opera.png" />
+    <Content Include="assets\i\examples\admin-safari.png" />
+    <Content Include="assets\i\examples\adminPage.png" />
+    <Content Include="assets\i\examples\blogPage.png" />
+    <Content Include="assets\i\examples\landing.png" />
+    <Content Include="assets\i\examples\landingPage.png" />
+    <Content Include="assets\i\examples\loginPage.png" />
+    <Content Include="assets\i\examples\sidebarPage.png" />
+    <Content Include="assets\i\favicon.png" />
+    <Content Include="assets\i\h_top.png" />
+    <Content Include="assets\i\icoAdd.png" />
+    <Content Include="assets\i\logo.png" />
+    <Content Include="assets\i\l_07.png" />
+    <Content Include="assets\i\startup-640x1096.png" />
+    <Content Include="assets\js\amazeui.datatables.min.js" />
+    <Content Include="assets\js\amazeui.js" />
+    <Content Include="assets\js\amazeui.legacy.js" />
+    <Content Include="assets\js\amazeui.legacy.min.js" />
+    <Content Include="assets\js\amazeui.min.js" />
+    <Content Include="assets\js\amazeui.widgets.helper.js" />
+    <Content Include="assets\js\amazeui.widgets.helper.min.js" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\codemirror.js" />
+    <Content Include="assets\js\dataTables.responsive.min.js" />
+    <Content Include="assets\js\echarts.min.js" />
+    <Content Include="assets\js\echartsExample.js" />
+    <Content Include="assets\js\fullcalendar.min.js" />
+    <Content Include="assets\js\handlebars.min.js" />
+    <Content Include="assets\js\jquery.jerichotab.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\moment.js" />
+    <Content Include="assets\js\polyfill\rem.min.js" />
+    <Content Include="assets\js\polyfill\respond.min.js" />
+    <Content Include="assets\js\theme.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -135,6 +217,39 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\c\Views\web.config" />
+    <Content Include="Areas\b\Views\web.config" />
+    <Content Include="Areas\b\Views\Login\Index.cshtml" />
+    <Content Include="assets\css\app.less" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="Wopop_files\askgreen.png" />
+    <Content Include="Wopop_files\errorred.png" />
+    <Content Include="Wopop_files\google_jquery-ui.min.js" />
+    <Content Include="Wopop_files\google_jquery.min.js" />
+    <Content Include="Wopop_files\JQuery.cookie.js" />
+    <Content Include="Wopop_files\jquery.pagination.js" />
+    <Content Include="Wopop_files\jquery.ui.all.css" />
+    <Content Include="Wopop_files\loading1.gif" />
+    <Content Include="Wopop_files\loadingpn.gif" />
+    <Content Include="Wopop_files\login.js" />
+    <Content Include="Wopop_files\login_bgx.gif" />
+    <Content Include="Wopop_files\login_m_bg.png" />
+    <Content Include="Wopop_files\logo.png" />
+    <Content Include="Wopop_files\okgreen.png" />
+    <Content Include="Wopop_files\pagination.css" />
+    <Content Include="Wopop_files\site_bg.png" />
+    <Content Include="Wopop_files\style.css" />
+    <Content Include="Wopop_files\style_log.css" />
+    <Content Include="Wopop_files\userpanel.css" />
+    <Content Include="Wopop_files\webtemples.js" />
+    <Content Include="Areas\b\Views\Shared\_LayOut.cshtml" />
+    <Content Include="Areas\b\Views\Shared\SideBar.cshtml" />
+    <Content Include="Areas\b\Views\Shared\Header.cshtml" />
+    <Content Include="Areas\b\Views\Building\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -147,7 +262,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -164,6 +281,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\b\Models\" />
+    <Folder Include="Areas\c\Controllers\" />
+    <Folder Include="Areas\c\Models\" />
+    <Folder Include="Areas\c\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +294,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mh.Housing.Shared\Mh.Housing.Dto\Mh.Housing.Dto.csproj">
+      <Project>{4bf679b3-7cd2-4192-8894-799da207369f}</Project>
+      <Name>Mh.Housing.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mh.Housing.Shared\Mh.Housing.IService\Mh.Housing.IService.csproj">
+      <Project>{9d66b3df-77b2-4807-83c5-2565b90acc7c}</Project>
+      <Name>Mh.Housing.IService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
